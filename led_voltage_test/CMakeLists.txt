@@ -1,0 +1,7 @@
+add_executable(led_voltage_test
+test.c
+)
+
+pico_enable_stdio_usb(led_voltage_test 1)
+pico_add_extra_outputs(led_voltage_test)
+target_link_libraries(led_voltage_test pico_stdlib hardware_adc pico_malloc pico_printf)

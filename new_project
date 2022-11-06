@@ -1,0 +1,6 @@
+#!/bin/bash
+
+mkdir $1;
+echo "add_subdirectory($1)" >> CMakeLists.txt
+touch "$1/CMakeLists.txt"
+printf "add_executable(\n\n)\n\ntarget_link_libraries($1 pico_stdlib)\n" >> "$1/CMakeLists.txt"

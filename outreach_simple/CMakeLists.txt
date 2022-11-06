@@ -1,0 +1,8 @@
+add_executable(outreach_simple
+obstacle_avoidance.c
+)
+
+
+pico_enable_stdio_usb(outreach_simple 1)
+pico_add_extra_outputs(outreach_simple)
+target_link_libraries(outreach_simple pico_stdlib hardware_pwm)
